@@ -51,7 +51,7 @@ url = f"https://www.example.com/tegro-payment"
 data = {
   "order_id": 1
 }
-requests.post(url, data)
+requests.get(url, data)
 ```
 
 
