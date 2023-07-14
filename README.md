@@ -10,6 +10,32 @@ Route for sending requests: '/tegro-payment'
 ## POST
 -Creates a new payment for order passed into it.
 
+### Example request:
+```
+url = f"https://www.example.com/tegro-payment"
+data = {
+  "currency": "RUB",
+  "amount": 100,
+  "order_id": 1,
+  "email": "customer_email@gmail.com",
+  "phone": "customer_phone@gmail.com",
+  "items": [
+          {
+            "name": "test item 1",
+            "count": 1,
+            "price": 600
+          },
+          {
+            "name": "test item 2",
+            "count": 1,
+            "price": 600
+          }
+        ]
+  }
+}
+requests.post(url, data)
+```
+
 POST-request should contain order data for a new payment: currency, amount, order_id, email, phone, items.
 If given data is valid, method will redirect user to Tegro.money payment page
 
@@ -18,6 +44,15 @@ If given data is valid, method will redirect user to Tegro.money payment page
 
 GET-request should contain order_id of the target payment.
 If given data is valid, method will return "Payment succesful order <your_order_id>" if the payment is completed and "Payment not found <your_order_id>" if the payment is not completed.
+
+### Example request:
+```
+url = f"https://www.example.com/tegro-payment"
+data = {
+  "order_id": 1
+}
+requests.post(url, data)
+```
 
 
 
