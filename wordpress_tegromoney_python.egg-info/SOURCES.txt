@@ -1,0 +1,7 @@
+setup.py
+wordpress_tegromoney_python/wordpress_tegromoney_python.py
+wordpress_tegromoney_python.egg-info/PKG-INFO
+wordpress_tegromoney_python.egg-info/SOURCES.txt
+wordpress_tegromoney_python.egg-info/dependency_links.txt
+wordpress_tegromoney_python.egg-info/requires.txt
+wordpress_tegromoney_python.egg-info/top_level.txt
